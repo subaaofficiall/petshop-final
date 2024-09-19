@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pet Paradise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #60cef9, #f351cdca);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0a1b9d;
+            padding: 10px;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            margin: 0 10px;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            background-color: hsl(192, 8%, 53%);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffa07a;
+
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .product-card {
+            background-color: #fff8dc;
+            border: 2px solid #ff6347;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            color: #ff4500;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            color: #32cd32;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #f351cdca;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Pet Paradise!</h1>
+        <p>Your one-stop shop for all your pet needs</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2 style="color:#ff4500;">Petty us...</h2>
+            <p style="color:#181818e9;">At Pet Paradise, we provide the best products for your pets, whether they’re furry, feathered, or scaled! Explore our wide range of items to keep your pets happy and healthy.</p>
+        </section>
+
+        <section id="products">
+            <h2 style="color:#ff4500;">Our Products</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="dog-food.jpeg" alt="Dog Food">
+                    <h3>Premium Dog Food</h3>
+                    <p class="price">$30.00</p>
+                    <p>Nutrient-rich food to keep your dog healthy and happy.</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="cat-scratcher.jpeg" alt="Cat Scratcher">
+                    <h3>Cat Scratcher</h3>
+                    <p class="price">$25.00</p>
+                    <p>Perfect for keeping your cat's claws healthy.</p>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="birds-cage.jpeg" alt="Bird Cage">
+                    <h3>Spacious Bird Cage</h3>
+                    <p class="price">$50.00</p>
+                    <p>A beautiful home for your feathered friends.</p>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="fish-tank.jpeg" alt="Fish Tank">
+                    <h3>Modern Fish Tank</h3>
+                    <p class="price">$80.00</p>
+                    <p>Stylish and spacious fish tank with LED lighting.</p>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="hamster-wheel.jpeg" alt="Hamster Wheel">
+                    <h3>Hamster Wheel</h3>
+                    <p class="price">$15.00</p>
+                    <p>Fun and engaging for your energetic little pet.</p>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="dog-toys.jpeg" alt="Dog Toys">
+                    <h3>Interactive Dog Toys</h3>
+                    <p class="price">$20.00</p>
+                    <p>Keep your dog entertained and active.</p>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="reptile-terrarium.jpeg" alt="Reptile Terrarium">
+                    <h3>Reptile Terrarium</h3>
+                    <p class="price">$120.00</p>
+                    <p>The perfect home for your reptiles, complete with heating.</p>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="cat-bed.jpeg" alt="Cat Bed">
+                    <h3>Cozy Cat Bed</h3>
+                    <p class="price">$35.00</p>
+                    <p>A soft and cozy bed for your cat to relax in.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 style="color:#ff4500;">Contact Us</h2>
+            <p style="color:#21201fe9;">Address: 123 Pet Street, Animal Town, USA</p>
+            <p style="color:#050505e9;">Email: contact@petparadise.com</p>
+            <p style="color:#151515e9;">Phone: (555) 123-4567</p>
+        </section>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 Pet Paradise. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+ 
+
+       
+

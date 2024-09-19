@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop Management</title>
+    <style>
+    . {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        background-color: #f5f5f5;
+        color: #333;
+    }
+    
+    header {
+        background-color: #ff5e78;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 10px 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    h1, h2 {
+        margin-bottom: 20px;
+    }
+    
+    section {
+        padding: 40px 20px;
+    }
+    
+    #menu {
+        background-color: #fff;
+    }
+    
+    .cake-grid {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .cake {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cake img {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+    }
+    
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    form input, form select, form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    form button {
+        width: 100%;
+        padding: 15px;
+        background-color: #ff5e78;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    form button:hover {
+        background-color: #ff3a54;
+    }
+    
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    
+    footer p {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sweet Treats Cake Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#menu">Our Cakes</a></li>
+                <li><a href="#order">Order Now</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Our Cakes</h2>
+        <div class="cake-grid">
+            <div class="cake">
+                <img src="cake1.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>$25.00</p>
+            </div>
+            <div class="cake">
+                <img src="cake2.jfif" alt="Vanilla Cake">
+                <h3>Vanilla Cake</h3>
+                <p>$20.00</p>
+            </div>
+            <div class="cake">
+                <img src="cake3.jfif" alt="Red Velvet Cake">
+                <h3>Red Velvet Cake</h3>
+                <p>$30.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="order">
+        <h2>Order Your Cake</h2>
+        <form action="order.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="cake">Select Cake:</label>
+            <select id="cake" name="cake">
+                <option value="chocolate">Chocolate Cake</option>
+                <option value="vanilla">Vanilla Cake</option>
+                <option value="red velvet">Red Velvet Cake</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required>
+            [10:07 PM, 9/12/2024] Hinduja Nsclg: </textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@sweettreats.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Location: 123 Bakery St, Sweet City</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sweet Treats Cake Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+. {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #ff5e78;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+#menu {
+    background-color: #fff;
+}
+
+.cake-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cake {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cake img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff5e78;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff3a54;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
